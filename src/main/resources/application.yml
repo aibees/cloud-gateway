@@ -1,0 +1,26 @@
+server:
+  port: 19000
+
+spring:
+  application:
+    name: cloud-gateway
+  r2dbc:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: r2dbc:mysql://192.168.75.87:3333/cameu?serverTimezone=UTC&characterEncoding=UTF-8&sslMode=DISABLED
+    username: cameu
+    password: cameu!@#123
+
+  jpa:
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: none
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone : http://aibees1129:qkr12wns3!@localhost:19001/eureka/
+  instance:
+    prefer-ip-address: true
