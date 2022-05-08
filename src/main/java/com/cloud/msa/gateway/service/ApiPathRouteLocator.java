@@ -40,6 +40,7 @@ public class ApiPathRouteLocator implements RouteLocator {
                     .and()
                     .method(route.getMethod());
         }
+        System.out.println(route.getPath() + " - " + spec + " - " + booleanSpec.toString());
         return booleanSpec.uri(route.getUri());
     }
 }
